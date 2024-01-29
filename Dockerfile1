@@ -10,7 +10,7 @@ RUN apk update && \
 FROM mcr.microsoft.com/dotnet/runtime:7.0
 LABEL author="varun"
 COPY --from=downloader /nopCommerce /nopCommerce
-ENV ASPNETCORE_URLS="http//0.0.0.0:5000"
+ENV ASPNETCORE_URLS="http://0.0.0.0:5000"
 EXPOSE 5000
 WORKDIR /nopCommerce
 CMD ["dotnet", "Nop.Web.dll"]
